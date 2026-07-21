@@ -5,3 +5,14 @@ out/
 broadcast/
 *.log
 .DS_Store
+
+# Local scripts
+JavaScript
+full_test.sh
+runPipeline.mjs
+run_supplychain.sh
+send-transaction.js
+shipment_vc.json
+solana-sweep
+supplyChainManager.mjs
+sweep.js
