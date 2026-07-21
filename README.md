@@ -24,3 +24,12 @@ node identity.js
 ## License
 
 MIT
+## Demo
+
+Live Identity Proof:
+https://alialkhtri3-png.github.io/farcaster-ens/
+
+## Releases
+
+- v1.1.0 - Web Identity Demo
+- v1.0.0 - Initial Identity Proof
