@@ -1,0 +1,8 @@
+{
+  "project": "Farcaster ENS Identity Proof",
+  "status": "online",
+  "did": "did:ethr:0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C",
+  "method": "EIP-712",
+  "repository": "https://github.com/alialkhtri3-png/farcaster-ens",
+  "pages": "https://alialkhtri3-png.github.io/farcaster-ens/"
+}
