@@ -1,35 +1,15 @@
-# Farcaster ENS
+# Farcaster ENS Identity Proof
 
-A lightweight Ethereum EIP-712 identity proof project built with ethers.js.
+A lightweight Ethereum identity proof system built with **ethers.js** using **EIP-712 typed data signing**, Ethereum DID, and Verifiable Credential concepts.
 
 ## Features
 
-- EIP-712 Typed Data Signing
-- Signature Verification
-- Identity Proof Export
-- Node.js + Termux Compatible
+- 🔐 EIP-712 Typed Data Signing
+- ✅ Signature Verification & Recovery
+- 🆔 Ethereum DID Document (`did:ethr`)
+- 🎫 Verifiable Credential Export
+- 📄 Identity Proof JSON Export
+- 🌐 Web Identity Demo
+- 📱 Node.js + Termux Compatible
 
-## Install
-
-npm install
-
-## Run
-
-./run.sh
-
-or
-
-node identity.js
-
-## License
-
-MIT
-## Demo
-
-Live Identity Proof:
-https://alialkhtri3-png.github.io/farcaster-ens/
-
-## Releases
-
-- v1.1.0 - Web Identity Demo
-- v1.0.0 - Initial Identity Proof
+## Architecture
