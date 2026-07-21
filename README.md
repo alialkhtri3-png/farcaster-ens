@@ -64,3 +64,13 @@ https://alialkhtri3-png.github.io/farcaster-ens/
 Interactive verifier:
 
 https://alialkhtri3-png.github.io/farcaster-ens/verify.html
+
+## Identity Profile
+
+Profile page:
+
+https://alialkhtri3-png.github.io/farcaster-ens/profile.html
+
+Metadata:
+
+https://alialkhtri3-png.github.io/farcaster-ens/profile.json
