@@ -12,7 +12,7 @@
     {
       "id": "#identity-proof",
       "type": "EIP712IdentityProof",
-      "serviceEndpoint": "github:farcaster-ens"
+    "serviceEndpoint": "https://github.com/alialkhtri3-png/farcaster-ens""
     }
   ]
 }
