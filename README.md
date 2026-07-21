@@ -12,6 +12,7 @@ A lightweight Ethereum identity proof system built with **ethers.js** using **EI
 - 🌐 Web Identity Demo
 - 📱 Node.js + Termux Compatible
 
+<<<<<<< HEAD
 ## Architecture
 did.json
 credential.json
@@ -19,3 +20,41 @@ identity-proof.json
 identity.js
 sign.js
 verify.js
+=======
+## Install
+
+npm install
+
+## Run
+
+./run.sh
+
+or
+
+node identity.js
+
+## License
+
+MIT
+## Demo
+
+Live Identity Proof:
+https://alialkhtri3-png.github.io/farcaster-ens/
+
+## Releases
+
+- v1.1.0 - Web Identity Demo
+- v1.0.0 - Initial Identity Proof
+## Status
+
+✅ Identity Engine Online
+
+- EIP-712 Signature Verification
+- DID Document Generation
+- Verifiable Credential Export
+- Ethereum Address Recovery
+- GitHub Pages Identity Demo
+
+
+## Architecture
+ e12d7c4 (Improve README documentation)
