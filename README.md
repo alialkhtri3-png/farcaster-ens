@@ -13,3 +13,9 @@ A lightweight Ethereum identity proof system built with **ethers.js** using **EI
 - 📱 Node.js + Termux Compatible
 
 ## Architecture
+did.json
+credential.json
+identity-proof.json
+identity.js
+sign.js
+verify.js
