@@ -1,0 +1,15 @@
+{
+  "name": "Farcaster ENS Identity Proof API",
+  "version": "1.2.0",
+  "endpoints": {
+    "did": "/.well-known/did.json",
+    "health": "/health.json",
+    "verify": "/verify.json"
+  },
+  "method": "EIP-712",
+  "standard": [
+    "DID",
+    "W3C Verifiable Credential",
+    "Ethereum Signature"
+  ]
+}
