@@ -1,0 +1,18 @@
+{
+  "id": "did:ethr:0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C",
+  "controller": "0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C",
+  "verificationMethod": [
+    {
+      "id": "#eip712-key",
+      "type": "EcdsaSecp256k1RecoveryMethod",
+      "controller": "did:ethr:0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C"
+    }
+  ],
+  "service": [
+    {
+      "id": "#identity-proof",
+      "type": "EIP712IdentityProof",
+      "serviceEndpoint": "github:farcaster-ens"
+    }
+  ]
+}
