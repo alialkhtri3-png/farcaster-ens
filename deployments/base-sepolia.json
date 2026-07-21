@@ -1,0 +1,8 @@
+{
+  "network":"base-sepolia",
+  "contracts":{
+    "DIDRegistry":"",
+    "CredentialRegistry":""
+  },
+  "status":"pending"
+}
