@@ -1,0 +1,11 @@
+{
+  "project": "Sovereign Identity Engine",
+  "module": "EIP-712 Identity Proof",
+  "runtime": "Node.js v26.3.1",
+  "library": "ethers.js v6.17.0",
+  "address": "0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C",
+  "algorithm": "EIP-712",
+  "signature": "0xa060b71e7eaba97c58726077084fef94a01ace1ecee915fcac2839af84b94b681fbc9122b51b165749f154b2af5fc5d40a6afd5f6303c9f6e46062349beeaf311c",
+  "verified": true,
+  "status": "Identity Verified"
+}
