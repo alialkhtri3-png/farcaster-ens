@@ -74,3 +74,35 @@ https://alialkhtri3-png.github.io/farcaster-ens/profile.html
 Metadata:
 
 https://alialkhtri3-png.github.io/farcaster-ens/profile.json
+
+## Smart Contracts
+
+### DID Registry
+Address:
+`0x5FC8d32690cc91D4c39d9d3abcBD16989F875707`
+
+Features:
+- DID creation
+- Controller management
+- Credential root linking
+
+### Credential Registry
+Address:
+`0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9`
+
+Features:
+- Credential issuance
+- Credential verification
+- Issuer tracking
+
+## Identity Engine V11
+
+Modules:
+- DID Registry
+- Verifiable Credentials
+- Wallet Intelligence
+- Graph Intelligence
+- Sybil Detection
+- Risk Engine
+- Reputation Engine
+- Identity Export
