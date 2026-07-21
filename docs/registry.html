@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Identity Registry</title>
+<style>
+body{
+font-family:Arial;
+padding:30px;
+}
+.card{
+border:1px solid #ddd;
+padding:20px;
+border-radius:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🆔 Identity Registry</h1>
+
+<p>
+✅ Verified Web3 Identity
+</p>
+
+<pre id="data"></pre>
+
+</div>
+
+<script>
+fetch("registry/index.json")
+.then(r=>r.json())
+.then(d=>{
+document.getElementById("data").textContent =
+JSON.stringify(d,null,2)
+})
+</script>
+
+</body>
+</html>

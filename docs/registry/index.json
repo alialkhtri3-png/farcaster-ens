@@ -1,0 +1,13 @@
+{
+  "registry": "Farcaster ENS Identity Registry",
+  "version": "1.5.0",
+  "identities": [
+    {
+      "did": "did:ethr:0xd267f1813DE0F9c6BA9dCafd85A809578b029F7C",
+      "status": "verified",
+      "method": "EIP-712",
+      "credential": "IdentityCredential",
+      "profile": "/profile.json"
+    }
+  ]
+}
