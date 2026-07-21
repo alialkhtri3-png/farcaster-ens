@@ -1,0 +1,15 @@
+cat >> README.md <<'EOF'
+
+## Development Environment
+
+Built with:
+
+- Solidity ^0.8.35
+- Foundry
+- Forge Standard Library
+- ethers.js
+- Express.js API
+
+## Foundry Dependencies
+
+This project uses forge-std as a git submodule
