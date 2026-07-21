@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Farcaster ENS Identity Verification</title>
+<style>
+body{
+font-family:Arial;
+padding:30px;
+}
+.card{
+border:1px solid #ddd;
+border-radius:12px;
+padding:20px;
+max-width:600px;
+}
+input,textarea,button{
+width:100%;
+margin:8px 0;
+padding:10px;
+}
+button{
+cursor:pointer;
+}
+.ok{
+color:green;
+font-weight:bold;
+}
+.bad{
+color:red;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🆔 Identity Verification</h1>
+
+<p>
+Farcaster ENS EIP-712 Proof
+</p>
+
+<label>Wallet Address</label>
+<input id="address" placeholder="0x...">
+
+<label>Message</label>
+<textarea id="message">
+Sovereign Identity Proof
+</textarea>
+
+<label>Signature</label>
+<textarea id="signature" placeholder="0x..."></textarea>
+
+<button onclick="verify()">Verify</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.min.js"></script>
+
+<script>
+
+function verify(){
+
+try{
+
+const address =
+document.getElementById("address").value;
+
+const message =
+document.getElementById("message").value;
+
+const signature =
+document.getElementById("signature").value;
+
+
+const recovered =
+ethers.verifyMessage(
+message,
+signature
+);
+
+
+if(recovered.toLowerCase()
+=== address.toLowerCase()){
+
+document.getElementById("result").innerHTML =
+"✅ Identity Verified<br>"+recovered;
+
+document.getElementById("result")
+.className="ok";
+
+}else{
+
+throw "Mismatch";
+
+}
+
+}catch(e){
+
+document.getElementById("result").innerHTML =
+"❌ Verification Failed";
+
+document.getElementById("result")
+.className="bad";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

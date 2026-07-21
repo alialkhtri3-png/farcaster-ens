@@ -58,3 +58,9 @@ https://alialkhtri3-png.github.io/farcaster-ens/
 
 ## Architecture
  e12d7c4 (Improve README documentation)
+
+## Verification Demo
+
+Interactive verifier:
+
+https://alialkhtri3-png.github.io/farcaster-ens/verify.html
