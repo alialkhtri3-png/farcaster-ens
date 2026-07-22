@@ -1,0 +1,6 @@
+{
+ "protocol":"SIP",
+ "version":"10.0.0",
+ "federations":[],
+ "status":"enabled"
+}

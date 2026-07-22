@@ -1,0 +1,10 @@
+{
+ "protocol":"SIP",
+ "version":"10.0.0",
+ "bridges":[
+  "DID",
+  "VC",
+  "Wallet",
+  "Enterprise"
+ ]
+}
