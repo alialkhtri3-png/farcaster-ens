@@ -1,0 +1,7 @@
+{
+  "nodeId":"sip-node-001",
+  "protocol":"SIP",
+  "version":"2.3.0",
+  "network":"Sovereign Identity Network",
+  "status":"active"
+}
