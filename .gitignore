@@ -18,3 +18,5 @@ supplyChainManager.mjs
 sweep.js
 .env
 .env
+.vercel
+.env*
