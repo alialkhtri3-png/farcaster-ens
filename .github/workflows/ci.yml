@@ -1,45 +1,42 @@
-name: Rust & Kotlin CI
+name: Sovereign Identity CI + Release
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, test-ci ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
-  rust:
-    name: Rust CI
+  node:
+    name: Node.js Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Rust
-        uses: actions-rs/toolchain@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          toolchain: stable
+          node-version: 22
+      - run: npm install
+      - run: node verify_vc.js
 
-      - name: Build Rust project
-        run: cargo build --verbose
-
-      - name: Run Rust tests
-        run: cargo test --all --verbose
-
-  kotlin:
-    name: Kotlin CI
+  solidity:
+    name: Foundry Smart Contracts
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          version: nightly
+      - run: forge build
+      - run: forge test
 
-      - name: Build Kotlin project
-        run: ./gradlew build
-
-      - name: Run Kotlin tests
-        run: ./gradlew test
+  release:
+    name: Create Release
+    needs: [node, solidity]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: "Sovereign Identity Release v${{ github.run_number }}"
+          body: "Automated release after CI success."

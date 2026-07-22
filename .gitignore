@@ -16,3 +16,5 @@ shipment_vc.json
 solana-sweep
 supplyChainManager.mjs
 sweep.js
+.env
+.env
