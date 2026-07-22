@@ -308,6 +308,22 @@ error:e.message
 
 
 
+
+
+app.post("/api/identity", async (req,res)=>{
+ try {
+  const address=req.body.address;
+  const identity=await didRegistry.getDID(address);
+  const balance=await provider.getBalance(address);
+  const txCount=await provider.getTransactionCount(address);
+  res.json({
+   identity:{address,did:identity.did,controller:identity.controller,active:identity.active},
+   wallet:{balanceETH:ethers.formatEther(balance),transactions:txCount},
+   engine:"Sovereign Identity Engine V11"
+  });
+ } catch(e){res.status(500).json({error:e.message});}
+});
+
 app.listen(3000,()=>{
 
 console.log(
