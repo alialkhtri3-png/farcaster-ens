@@ -1,0 +1,11 @@
+{
+ "type":"IdentityBlock",
+ "version":"12.0.0",
+ "fields":[
+  "did",
+  "credential",
+  "reputation",
+  "timestamp",
+  "signature"
+ ]
+}
