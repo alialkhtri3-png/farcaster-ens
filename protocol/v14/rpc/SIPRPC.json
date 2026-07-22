@@ -1,0 +1,10 @@
+{
+ "protocol":"SIP",
+ "version":"14.0.0",
+ "rpc":[
+  "identity",
+  "credential",
+  "verify",
+  "resolve"
+ ]
+}

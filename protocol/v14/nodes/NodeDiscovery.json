@@ -1,0 +1,8 @@
+{
+ "network":"SIP",
+ "version":"14.0.0",
+ "discovery":{
+   "enabled":true,
+   "nodes":[]
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "protocol":"SIP",
+ "security":{
+  "signatureVerification":true,
+  "credentialValidation":true,
+  "validatorConsensus":true
+ }
+}
