@@ -1,0 +1,14 @@
+{
+ "version":"2.7.0",
+ "signals":[
+  "credentialValidity",
+  "walletHistory",
+  "identityGraph",
+  "behavior"
+ ],
+ "outputs":[
+  "identityScore",
+  "trustLevel",
+  "riskLevel"
+ ]
+}
