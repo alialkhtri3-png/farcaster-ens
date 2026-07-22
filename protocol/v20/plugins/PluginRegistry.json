@@ -1,0 +1,8 @@
+{
+ "plugins":[
+  "identity",
+  "credential",
+  "reputation",
+  "privacy"
+ ]
+}
