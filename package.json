@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "test:sip-network": "node protocol/v22/mesh/test-network.js",
-    "sip-node": "node protocol/v23/cli/sip.js"
+    "sip-node": "node protocol/v23/cli/sip.js",
+    "sip-cluster": "node protocol/v24/cli/cluster.js"
   },
   "keywords": [],
   "author": "",
