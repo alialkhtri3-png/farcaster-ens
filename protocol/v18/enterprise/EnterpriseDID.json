@@ -1,0 +1,8 @@
+{
+ "protocol":"SIP",
+ "version":"18.0.0",
+ "enterprise":{
+  "organizationIdentity":true,
+  "namespace":true
+ }
+}
