@@ -1,0 +1,6 @@
+{
+ "protocol":"SIP",
+ "version":"5.0.0",
+ "nodes":[],
+ "discovery":"enabled"
+}

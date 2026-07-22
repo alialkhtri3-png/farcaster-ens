@@ -1,0 +1,9 @@
+{
+ "jsonrpc":"2.0",
+ "methods":[
+  "identity.resolve",
+  "credential.verify",
+  "reputation.get",
+  "network.status"
+ ]
+}
