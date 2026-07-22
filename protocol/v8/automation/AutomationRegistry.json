@@ -1,0 +1,9 @@
+{
+ "protocol":"SIP",
+ "version":"8.0.0",
+ "automation":[
+  "verification",
+  "credential-management",
+  "risk-response"
+ ]
+}
