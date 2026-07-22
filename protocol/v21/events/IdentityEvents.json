@@ -1,0 +1,7 @@
+{
+ "events":[
+  "identity.created",
+  "credential.issued",
+  "identity.verified"
+ ]
+}
