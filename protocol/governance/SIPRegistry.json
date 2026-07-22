@@ -1,0 +1,16 @@
+{
+  "protocol": "SIP",
+  "registry": {
+    "currentVersion": "1.6.0",
+    "proposals": [
+      {
+        "id": "SIP-001",
+        "status": "accepted"
+      },
+      {
+        "id": "SIP-005",
+        "status": "accepted"
+      }
+    ]
+  }
+}
