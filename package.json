@@ -9,7 +9,8 @@
     "test:sip-network": "node protocol/v22/mesh/test-network.js",
     "sip-node": "node protocol/v23/cli/sip.js",
     "sip-cluster": "node protocol/v24/cli/cluster.js",
-    "sip-consensus": "node protocol/v25/cli/consensus.js"
+    "sip-consensus": "node protocol/v25/cli/consensus.js",
+    "sip-governance": "node protocol/v26/cli/governance.js"
   },
   "keywords": [],
   "author": "",
