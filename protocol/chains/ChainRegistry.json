@@ -1,0 +1,26 @@
+{
+  "protocol":"SIP",
+  "version":"2.9.0",
+  "chains":[
+    {
+      "name":"Ethereum",
+      "id":1,
+      "identity":"enabled"
+    },
+    {
+      "name":"Base",
+      "id":8453,
+      "identity":"enabled"
+    },
+    {
+      "name":"Polygon",
+      "id":137,
+      "identity":"enabled"
+    },
+    {
+      "name":"Arbitrum",
+      "id":42161,
+      "identity":"enabled"
+    }
+  ]
+}
