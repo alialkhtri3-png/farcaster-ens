@@ -1,0 +1,9 @@
+{
+  "protocol": "SIP",
+  "version": "2.1.0",
+  "node": {
+    "discovery": true,
+    "health": true,
+    "sync": true
+  }
+}
