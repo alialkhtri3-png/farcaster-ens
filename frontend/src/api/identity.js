@@ -1,7 +1,18 @@
 export async function getIdentity(address) {
-  const response = await fetch(
-    `/api/identity/${address}`
+  const res = await fetch(
+    "http://localhost:3000/api/identity",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ address }),
+    }
   );
 
-  return response.json();
+  if (!res.ok) {
+    throw new Error("Identity API error");
+  }
+
+  return await res.json();
 }
