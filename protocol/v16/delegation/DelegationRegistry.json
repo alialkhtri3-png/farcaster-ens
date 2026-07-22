@@ -1,0 +1,6 @@
+{
+ "delegation":{
+  "enabled":true,
+  "identityBased":true
+ }
+}

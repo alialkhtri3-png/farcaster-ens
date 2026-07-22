@@ -1,0 +1,7 @@
+{
+ "council":{
+  "type":"validator",
+  "governance":"SIP",
+  "active":true
+ }
+}

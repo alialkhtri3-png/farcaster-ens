@@ -1,0 +1,6 @@
+{
+ "security":{
+  "emergencyPause":true,
+  "recovery":true
+ }
+}

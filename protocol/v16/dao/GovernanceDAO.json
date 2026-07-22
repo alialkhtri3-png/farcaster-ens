@@ -1,0 +1,9 @@
+{
+ "protocol":"SIP",
+ "version":"16.0.0",
+ "dao":{
+  "enabled":true,
+  "proposalSystem":true,
+  "communityGovernance":true
+ }
+}
