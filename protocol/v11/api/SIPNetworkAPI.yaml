@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+ title: SIP Global Network API
+ version: 11.0.0
+
+paths:
+ /resolve/{did}:
+  get:
+   summary: Resolve global identity
+
+ /federation/status:
+  get:
+   summary: Network status

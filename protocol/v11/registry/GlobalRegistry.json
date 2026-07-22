@@ -1,0 +1,7 @@
+{
+ "protocol":"SIP",
+ "version":"11.0.0",
+ "network":"global",
+ "identities":[],
+ "nodes":[]
+}
