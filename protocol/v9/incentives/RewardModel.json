@@ -1,0 +1,9 @@
+{
+ "protocol":"SIP",
+ "version":"9.0.0",
+ "rewards":[
+  "node-operation",
+  "identity-validation",
+  "trust-contribution"
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "protocol":"SIP",
+ "version":"9.0.0",
+ "services":[
+  "verification",
+  "credential",
+  "reputation",
+  "identity-api"
+ ]
+}
