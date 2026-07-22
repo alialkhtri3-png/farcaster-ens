@@ -1,0 +1,9 @@
+{
+ "protocol":"SIP",
+ "version":"15.0.0",
+ "staking":{
+   "enabled":true,
+   "validatorBond":true,
+   "lockPeriod":"configurable"
+ }
+}

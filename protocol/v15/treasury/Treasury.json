@@ -1,0 +1,7 @@
+{
+ "protocol":"SIP",
+ "treasury":{
+  "enabled":true,
+  "funding":"network rewards"
+ }
+}

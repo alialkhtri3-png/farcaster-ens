@@ -1,0 +1,7 @@
+{
+ "protocol":"SIP",
+ "slashing":{
+  "doubleValidation":true,
+  "maliciousNodeRemoval":true
+ }
+}
