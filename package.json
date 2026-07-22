@@ -1,10 +1,10 @@
 {
   "name": "farcaster-ens",
   "version": "1.0.0",
-  "description": "A lightweight Ethereum identity proof system built with **ethers.js** using **EIP-712 typed data signing**, Ethereum DID, and Verifiable Credential concepts.",
-  "main": "index.js",
+  "description": "Sovereign Identity Protocol - Ethereum DID, Verifiable Credentials and Identity Network",
+  "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "test:sip-network": "node protocol/v22/mesh/test-network.js",
     "sip-node": "node protocol/v23/cli/sip.js",
@@ -13,12 +13,13 @@
     "sip-governance": "node protocol/v26/cli/governance.js",
     "sip-security": "node protocol/v27/cli/security.js",
     "sip-economy": "node protocol/v28/cli/economy.js",
-    "sip-market": "node protocol/v29/cli/market.js"
+    "sip-market": "node protocol/v29/cli/market.js",
+    "sip-runtime": "node protocol/v30/cli/sip.js",
+    "build:contracts": "forge build",
+    "test:contracts": "forge test",
+    "build": "npm run build:contracts",
+    "test:all": "npm run test:contracts && npm run test:sip-network"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
@@ -27,17 +28,9 @@
     "jsonwebtoken": "^9.0.3",
     "uuid": "^14.0.1"
   },
-  "directories": {
-    "doc": "docs",
-    "lib": "lib",
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alialkhtri3-png/farcaster-ens.git"
   },
-  "bugs": {
-    "url": "https://github.com/alialkhtri3-png/farcaster-ens/issues"
-  },
-  "homepage": "https://github.com/alialkhtri3-png/farcaster-ens#readme"
+  "license": "MIT"
 }
