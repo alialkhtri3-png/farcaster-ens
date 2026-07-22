@@ -1,0 +1,7 @@
+{
+ "providers":{
+  "verification":true,
+  "reputation":true,
+  "discovery":true
+ }
+}
