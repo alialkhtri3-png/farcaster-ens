@@ -1,0 +1,2 @@
+export const CONTRACT_ADDRESS='0x5b73c5498c1e3b4dba84de0f1833c4a029d90519';
+export { abi } from './Contract.json';
