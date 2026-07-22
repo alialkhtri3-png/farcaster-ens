@@ -1,0 +1,12 @@
+{
+ "name":"Sovereign Identity Protocol",
+ "symbol":"SIP",
+ "version":"2.2.0",
+ "features":[
+  "DID Resolution",
+  "Credential Verification",
+  "Identity Graph",
+  "Reputation Engine",
+  "Node Runtime"
+ ]
+}
