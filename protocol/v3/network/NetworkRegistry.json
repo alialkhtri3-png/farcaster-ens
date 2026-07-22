@@ -1,0 +1,11 @@
+{
+ "protocol":"SIP",
+ "version":"3.0.0",
+ "nodes":[],
+ "networks":[
+  "Ethereum",
+  "Base",
+  "Polygon",
+  "Arbitrum"
+ ]
+}
