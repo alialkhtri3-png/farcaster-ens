@@ -1,0 +1,10 @@
+{
+  "registry": "SIP Application Registry",
+  "applications": [
+    {
+      "name": "SIP Identity Passport",
+      "type": "Identity Application",
+      "status": "active"
+    }
+  ]
+}

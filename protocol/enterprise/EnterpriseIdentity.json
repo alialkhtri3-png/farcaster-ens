@@ -1,0 +1,15 @@
+{
+  "protocol": "SIP",
+  "version": "1.7.0",
+  "enterpriseIdentity": {
+    "organizations": true,
+    "verifiedEntities": true,
+    "credentialIssuers": true
+  },
+  "features": [
+    "Organization DID",
+    "Enterprise Credentials",
+    "Trusted Issuers",
+    "Access Verification"
+  ]
+}
