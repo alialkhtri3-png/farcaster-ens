@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  title: Sovereign Identity Protocol API
+  version: SIP-1.0
+
+paths:
+  /identity/{address}:
+    get:
+      summary: Resolve identity
+
+  /verify:
+    post:
+      summary: Verify credential
