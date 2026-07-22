@@ -1,0 +1,10 @@
+{
+ "protocol":"SIP",
+ "version":"7.0.0",
+ "analytics":[
+  "identityScore",
+  "riskScore",
+  "trustScore",
+  "behaviorPattern"
+ ]
+}
