@@ -1,0 +1,15 @@
+{
+  "protocol": "SIP",
+  "version": "1.8.0",
+  "privacy": {
+    "userControlledData": true,
+    "selectiveDisclosure": true,
+    "credentialPrivacy": true,
+    "consentManagement": true
+  },
+  "security": [
+    "Zero Knowledge Proof Ready",
+    "Encrypted Identity Data",
+    "Permission Based Access"
+  ]
+}
