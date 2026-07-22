@@ -324,6 +324,14 @@ app.post("/api/identity", async (req,res)=>{
  } catch(e){res.status(500).json({error:e.message});}
 });
 
+app.get("/api/status", (req,res)=>res.json({
+  protocol:"Sovereign Identity Protocol SIP v30.0.0",
+  engine:"Sovereign Identity Engine V11",
+  status:"online",
+  runtime:"active",
+  modules:["DID","VC","Wallet Intelligence","Graph Intelligence","Reputation","Sybil Detection"]
+}));
+
 app.listen(3000,()=>{
 
 console.log(

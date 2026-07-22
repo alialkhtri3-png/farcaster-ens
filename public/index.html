@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sovereign Identity Engine</title>
+</head>
+<body>
+<h1>🚀 Sovereign Identity Engine V11</h1>
+<pre id="status">Loading...</pre>
+
+<script>
+fetch('/api/status')
+.then(r=>r.json())
+.then(data=>{
+ document.getElementById('status').textContent =
+ JSON.stringify(data,null,2);
+});
+</script>
+
+</body>
+</html>
