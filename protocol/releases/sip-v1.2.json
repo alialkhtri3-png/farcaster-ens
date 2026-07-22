@@ -1,0 +1,21 @@
+{
+  "protocol": "SIP",
+  "version": "1.2.0",
+  "name": "Sovereign Identity Protocol",
+  "identity": {
+    "did": true,
+    "credentials": true,
+    "graph": true,
+    "reputation": true,
+    "wallet_intelligence": true,
+    "verification": true
+  },
+  "layers": [
+    "DID Registry",
+    "Verifiable Credential Layer",
+    "Identity Graph",
+    "Reputation Engine",
+    "Wallet Intelligence"
+  ],
+  "status": "production-ready"
+}
