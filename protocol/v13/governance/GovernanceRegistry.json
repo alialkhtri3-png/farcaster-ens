@@ -1,0 +1,9 @@
+{
+  "protocol":"SIP",
+  "version":"13.0.0",
+  "governance":{
+    "proposal":true,
+    "upgrade":true,
+    "registry":true
+  }
+}

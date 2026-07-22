@@ -1,0 +1,12 @@
+{
+ "protocol":"SIP",
+ "version":"13.0.0",
+ "release":"Identity Operating Layer",
+ "components":[
+  "Runtime",
+  "SDK",
+  "Governance",
+  "Monitoring",
+  "Deployment"
+ ]
+}
