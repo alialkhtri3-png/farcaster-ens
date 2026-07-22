@@ -1,0 +1,9 @@
+{
+ "events":[
+  "IdentityCreated",
+  "CredentialIssued",
+  "CredentialVerified",
+  "IdentityUpdated",
+  "IdentityRevoked"
+ ]
+}

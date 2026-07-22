@@ -1,0 +1,10 @@
+{
+ "protocol":"SIP",
+ "version":"6.0.0",
+ "metrics":[
+  "nodes",
+  "identities",
+  "credentials",
+  "verificationRequests"
+ ]
+}

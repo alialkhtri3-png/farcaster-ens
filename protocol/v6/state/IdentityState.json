@@ -1,0 +1,9 @@
+{
+ "identityStates":[
+  "created",
+  "verified",
+  "trusted",
+  "revoked"
+ ],
+ "version":"6.0.0"
+}
