@@ -1,0 +1,5 @@
+{
+ "privacy":"zero knowledge",
+ "userControl":true,
+ "selectiveDisclosure":true
+}
