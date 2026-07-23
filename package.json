@@ -21,6 +21,7 @@
     "test:all": "npm run test:contracts && npm run test:sip-network"
   },
   "dependencies": {
+    "@alialkhtri3-png/sip-runtime": "^32.1.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
