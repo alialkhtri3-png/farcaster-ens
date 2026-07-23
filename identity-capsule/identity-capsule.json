@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "issuer": "ali.cb.id",
+  "identity": {
+    "type": "DID",
+    "method": "did:ethr",
+    "controller": ""
+  },
+  "walletOwnershipProof": {
+    "oldWallet": "",
+    "newWallet": "",
+    "message": "I authorize migration from old wallet to new wallet",
+    "signature": "",
+    "timestamp": ""
+  },
+  "validatorIdentity": {
+    "chain": "BNB Smart Chain",
+    "validatorAddress": "0x0C5c5472...86f66D3A54",
+    "status": "active",
+    "selfStake": "4211.21 BNB",
+    "delegated": "902707.31 BNB",
+    "delegators": 493,
+    "commission": 0.10,
+    "rewardRate": 0.0073
+  },
+  "attestation": {
+    "type": "TDX",
+    "verified": false
+  },
+  "reputation": {
+    "score": 0,
+    "risk": "unknown"
+  }
+}

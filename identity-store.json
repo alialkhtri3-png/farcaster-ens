@@ -10,9 +10,33 @@
   "0x85c6ce94b0f0d3af06e3c35280497aa9408917e5": {
     "address": "0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5",
     "did": "did:ethr:base:0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5",
-    "credential": "{\"@context\":[\"https://www.w3.org/2018/credentials/v1\"],\"type\":[\"VerifiableCredential\",\"SIPIdentityCredential\"],\"credentialSubject\":{\"id\":\"did:ethr:base:0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5\",\"wallet\":\"0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5\",\"protocol\":\"SIP\"}}",
-    "signature": "0xacd1667a1636f79b47966819d9b0bd16dfb70a2d253fa92dc267fee25eaf7fd86535dda262a93a01747010d0d76131633221aa061b24573bac9416e5d3e231c01b",
+    "credential": "SIPIdentityCredential",
+    "signature": "demo-signature",
     "active": true,
-    "createdAt": "2026-07-23T01:31:29.020Z"
+    "createdAt": "2026-07-23T01:45:53.249Z"
+  },
+  "0x6905d159ceb6d4058afbcd812c79e8461e6386ea": {
+    "address": "0x6905d159Ceb6D4058aFBcD812c79E8461E6386Ea",
+    "did": "did:ethr:base:0x6905d159Ceb6D4058aFBcD812c79E8461E6386Ea",
+    "credential": "SIPIdentityCredential",
+    "signature": "0x3fdb0b929ce9ff1a1f7da6c9d2a930bffb8baf9159ef47cf59f5c212e9b72ed569a38985af0fabeaaa5bdf4cf2ea4f4c177ce580e681f44c175d8577dd379f721b",
+    "active": true,
+    "createdAt": "2026-07-23T01:46:43.782Z"
+  },
+  "0x778a323a3e87bd84c475b285101b9b8cca695a93": {
+    "address": "0x778A323A3E87bd84C475B285101b9b8CCA695a93",
+    "did": "did:ethr:base:0x778A323A3E87bd84C475B285101b9b8CCA695a93",
+    "credential": "SIPIdentityCredential",
+    "signature": "0xf3cd43479e78cca209b11cd5e33493253bfea832b5adbda4df99accfeb8b7f773d1f5c71fa9ed6ffa4564672be5359b9e49e46e2174326374d1c6dcc15c2f1d41c",
+    "active": true,
+    "createdAt": "2026-07-23T01:47:32.647Z"
+  },
+  "0x872db6b1b18d0347472a12b566defcb692013124": {
+    "address": "0x872db6b1B18D0347472a12B566dEFCB692013124",
+    "did": "did:ethr:base:0x872db6b1B18D0347472a12B566dEFCB692013124",
+    "credential": "SIPIdentityCredential",
+    "signature": "sip-v11.1-proof",
+    "active": true,
+    "createdAt": "2026-07-23T01:57:08.308Z"
   }
 }

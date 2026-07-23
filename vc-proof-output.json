@@ -1,0 +1,27 @@
+{
+  "wallet": "0x872db6b1B18D0347472a12B566dEFCB692013124",
+  "did": "did:ethr:base:0x872db6b1B18D0347472a12B566dEFCB692013124",
+  "vc": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1"
+    ],
+    "type": [
+      "VerifiableCredential",
+      "SIPIdentityCredential"
+    ],
+    "issuer": "Sovereign Identity Protocol",
+    "credentialSubject": {
+      "id": "did:ethr:base:0x872db6b1B18D0347472a12B566dEFCB692013124",
+      "wallet": "0x872db6b1B18D0347472a12B566dEFCB692013124",
+      "protocol": "SIP"
+    },
+    "issuanceDate": "2026-07-23T01:55:05.288Z",
+    "proof": {
+      "type": "EcdsaSecp256k1RecoverySignature",
+      "created": "2026-07-23T01:55:05.302Z",
+      "verificationMethod": "did:ethr:base:0x872db6b1B18D0347472a12B566dEFCB692013124#key-1",
+      "proofPurpose": "authentication",
+      "signatureValue": "0x86b39e03141ff18a3a01349b8fed0f8e7ebe80296641b80e622e9a075a8a296208d90a13b447eca08e7157d0d468075e4d81048e35c8bb8994c44ae077c9d3bf1c"
+    }
+  }
+}
