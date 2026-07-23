@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   publish:
-    name: Publish SIP SDK
     runs-on: ubuntu-latest
 
     defaults:
@@ -25,13 +24,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 26
           registry-url: https://npm.pkg.github.com
+          scope: "@alialkhtri3-png"
 
       - name: Install
         run: npm ci
 
-      - name: Publish Package
+      - name: Publish SDK
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
