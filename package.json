@@ -1,6 +1,6 @@
 {
   "name": "@alialkhtri3-png/sip-runtime",
-  "version": "32.1.0",
+  "version": "1.0.7",
   "description": "Sovereign Identity Protocol - Ethereum DID, Verifiable Credentials and Identity Network",
   "main": "server.js",
   "type": "commonjs",
