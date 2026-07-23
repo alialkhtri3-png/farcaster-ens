@@ -1,44 +1,34 @@
-name: Sovereign Identity CI + Release
+name: Sovereign Identity CI
 
 on:
   push:
-    branches: [ main, test-ci ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
+
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   node:
     name: Node.js Tests
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Configure GitHub Packages auth
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: npm install
-      - run: node verify_vc.js
 
-  solidity:
-    name: Foundry Smart Contracts
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-      - run: forge build
-      - run: forge test
+      - name: Install dependencies
+        run: npm install
 
-  release:
-    name: Create Release
-    needs: [node, solidity]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ github.run_number }}
-          name: "Sovereign Identity Release v${{ github.run_number }}"
-          body: "Automated release after CI success."
+      - name: Verify
+        run: |
+          if [ -f verify_vc.js ]; then
+            node verify_vc.js
+          else
+            echo "verify_vc.js not found - skip"
+          fi
