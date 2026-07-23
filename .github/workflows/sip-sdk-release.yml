@@ -13,12 +13,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-
     steps:
       - name: Checkout
-        uses: actions/setup-node@v5
+        uses: actions/checkout@v5
 
       - name: Setup Node
         uses: actions/setup-node@v5
@@ -27,10 +24,12 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@alialkhtri3-png"
 
-      - name: Install
+      - name: Install SDK dependencies
+        working-directory: sdk
         run: npm ci
 
       - name: Publish SDK
+        working-directory: sdk
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
