@@ -105,3 +105,4 @@ Modules:
 - Reputation Engine
 - Identity Export
 Test CI update
+Current Release: v292.0.0
