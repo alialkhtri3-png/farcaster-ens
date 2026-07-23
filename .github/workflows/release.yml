@@ -6,6 +6,7 @@ on:
       - "sip-v*"
 
 permissions:
+  packages: read
   contents: write
 
 jobs:
