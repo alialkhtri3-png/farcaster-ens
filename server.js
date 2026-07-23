@@ -334,14 +334,14 @@ if(!identity || !identity.did || identity.did===""){
   res.json({
    identity:{address,did:identity.did,controller:identity.controller,active:identity.active},
    wallet:{balanceETH:ethers.formatEther(balance),transactions:txCount},
-   engine:"Sovereign Identity Engine V11"
+   engine:"Sovereign Identity Engine V11.3"
   });
  } catch(e){res.status(500).json({error:e.message});}
 });
 
 app.get("/api/status", (req,res)=>res.json({
   protocol:"Sovereign Identity Protocol SIP v30.0.0",
-  engine:"Sovereign Identity Engine V11",
+  engine:"Sovereign Identity Engine V11.3",
   status:"online",
   runtime:"active",
   modules:["DID","VC","Wallet Intelligence","Graph Intelligence","Reputation","Sybil Detection"]
@@ -385,7 +385,7 @@ app.post("/api/vc/issue", async (req,res)=>{
   res.json({
     credential,
     issuer:"Sovereign Identity Protocol",
-    engine:"Sovereign Identity Engine V11"
+    engine:"Sovereign Identity Engine V11.3"
   });
 
  }catch(e){
@@ -694,7 +694,7 @@ app.post("/api/did/register", (req,res)=>{
 
     protocol:"SIP DID Registry",
 
-    engine:"Sovereign Identity Engine V11"
+    engine:"Sovereign Identity Engine V11.3"
 
   });
 
@@ -734,7 +734,7 @@ app.get("/api/did/:address", (req,res)=>{
  res.json({
    protocol:"SIP DID Registry",
    identity,
-   engine:"Sovereign Identity Engine V11"
+   engine:"Sovereign Identity Engine V11.3"
  });
 });
 
@@ -801,7 +801,7 @@ app.get("/api/vc/:address",(req,res)=>{
    credential,
    signature:data.signature,
    issuer:"Sovereign Identity Protocol",
-   engine:"Sovereign Identity Engine V11"
+   engine:"Sovereign Identity Engine V11.3"
  });
 
 });
