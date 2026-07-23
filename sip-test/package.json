@@ -1,0 +1,9 @@
+{
+  "name": "sip-test",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@alialkhtri3-png/sip-sdk": "1.0.3",
+    "ethers": "6.17.0"
+  }
+}

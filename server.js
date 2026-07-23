@@ -313,7 +313,22 @@ error:e.message
 app.post("/api/identity", async (req,res)=>{
  try {
   const address=req.body.address;
-  const identity=await didRegistry.getDID(address);
+  let identity;
+
+try {
+  identity = identityStore[address.toLowerCase()] || await didRegistry.getDID(address);
+} catch(e) {
+  identity = null;
+}
+
+if(!identity || !identity.did || identity.did===""){
+  identity = identityStore[address.toLowerCase()] || {
+    address,
+    did:"",
+    controller:"0x0000000000000000000000000000000000000000",
+    active:false
+  };
+}
   const balance=await provider.getBalance(address);
   const txCount=await provider.getTransactionCount(address);
   res.json({
@@ -339,3 +354,217 @@ console.log(
 );
 
 });
+
+const fs = require("fs");
+
+const STORE_FILE = "./identity-store.json";
+
+let identityStore = fs.existsSync(STORE_FILE)
+ ? JSON.parse(fs.readFileSync(STORE_FILE))
+ : {};
+
+function saveIdentityStore(){
+ fs.writeFileSync(
+  STORE_FILE,
+  JSON.stringify(identityStore,null,2)
+ );
+}
+
+app.post("/api/did/register", (req,res)=>{
+
+  const {
+    address,
+    did,
+    credential,
+    signature
+  } = req.body;
+
+
+  if(!address || !did || !credential || !signature){
+    return res.status(400).json({
+      error:"missing fields"
+    });
+  }
+
+
+  identityStore[address.toLowerCase()] = {
+    address,
+    did,
+    credential,
+    signature,
+    active:true,
+    createdAt:new Date().toISOString()
+  };
+
+  saveIdentityStore();
+
+
+  res.json({
+
+    status:"registered",
+
+    identity:{
+      address,
+      did,
+      active:true
+    },
+
+    protocol:"SIP DID Registry",
+
+    engine:"Sovereign Identity Engine V11"
+
+  });
+
+});
+
+
+app.get("/api/did/:address",(req,res)=>{
+
+ const id =
+ identityStore[
+  req.params.address.toLowerCase()
+ ];
+
+ if(!id){
+
+  return res.status(404).json({
+    error:"DID not found"
+  });
+
+ }
+
+ res.json(id);
+
+});
+
+app.get("/api/did/:address", (req,res)=>{
+ const address=req.params.address.toLowerCase();
+
+ const identity=identityStore[address];
+
+ if(!identity){
+   return res.status(404).json({
+    error:"DID not found"
+   });
+ }
+
+ res.json({
+   protocol:"SIP DID Registry",
+   identity,
+   engine:"Sovereign Identity Engine V11"
+ });
+});
+
+
+
+// ===============================
+// SIP DID Document Resolver
+// ===============================
+
+app.get("/api/did-document/:address",(req,res)=>{
+
+ const address=req.params.address;
+
+ const did=`did:ethr:base:${address}`;
+
+ res.json({
+   "@context":"https://w3id.org/did/v1",
+   id:did,
+   controller:address,
+   verificationMethod:[
+    {
+     id:`${did}#key-1`,
+     type:"EcdsaSecp256k1RecoveryMethod",
+     controller:address
+    }
+   ],
+   authentication:[
+    `${did}#key-1`
+   ],
+   protocol:"SIP"
+ });
+
+});
+
+
+// ===============================
+// SIP VC Resolver
+// ===============================
+
+app.get("/api/vc/:address",(req,res)=>{
+
+ const data=
+ identityStore[
+  req.params.address.toLowerCase()
+ ];
+
+ if(!data)
+  return res.status(404).json({
+    error:"VC not found"
+  });
+
+
+ let credential;
+
+ try{
+  credential=JSON.parse(data.credential);
+ }
+ catch{
+  credential=data.credential;
+ }
+
+
+ res.json({
+   credential,
+   signature:data.signature,
+   issuer:"Sovereign Identity Protocol",
+   engine:"Sovereign Identity Engine V11"
+ });
+
+});
+
+
+// ===============================
+// SIP Signature Verification
+// ===============================
+
+app.post("/api/verify",(req,res)=>{
+
+ const {
+  message,
+  signature,
+  address
+ }=req.body;
+
+
+ try{
+
+ const recovered =
+ ethers.verifyMessage(
+   message,
+   signature
+ );
+
+
+ res.json({
+   valid:
+   recovered.toLowerCase()
+   === address.toLowerCase(),
+
+   recovered,
+   address,
+   protocol:"SIP ECDSA Verification"
+ });
+
+ }
+ catch(e){
+
+ res.status(400).json({
+  valid:false,
+  error:e.message
+ });
+
+ }
+
+});
+

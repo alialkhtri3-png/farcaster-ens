@@ -1,0 +1,18 @@
+{
+  "0xd7ef3beba8f8275803dd2dd39412a1c0ab78176b": {
+    "address": "0xD7Ef3bEbA8F8275803DD2dd39412A1C0aB78176b",
+    "did": "did:ethr:base:0xD7Ef3bEbA8F8275803DD2dd39412A1C0aB78176b",
+    "credential": "SIPIdentityCredential",
+    "signature": "demo-signature",
+    "active": true,
+    "createdAt": "2026-07-23T01:29:49.660Z"
+  },
+  "0x85c6ce94b0f0d3af06e3c35280497aa9408917e5": {
+    "address": "0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5",
+    "did": "did:ethr:base:0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5",
+    "credential": "{\"@context\":[\"https://www.w3.org/2018/credentials/v1\"],\"type\":[\"VerifiableCredential\",\"SIPIdentityCredential\"],\"credentialSubject\":{\"id\":\"did:ethr:base:0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5\",\"wallet\":\"0x85C6CE94B0f0D3AF06e3c35280497Aa9408917e5\",\"protocol\":\"SIP\"}}",
+    "signature": "0xacd1667a1636f79b47966819d9b0bd16dfb70a2d253fa92dc267fee25eaf7fd86535dda262a93a01747010d0d76131633221aa061b24573bac9416e5d3e231c01b",
+    "active": true,
+    "createdAt": "2026-07-23T01:31:29.020Z"
+  }
+}
