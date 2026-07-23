@@ -545,7 +545,76 @@ app.get("/api/identity/full/:wallet", async (req,res)=>{
       }
     },
 
-    engine:"Sovereign Identity Engine V11.2"
+    engine:"Sovereign Identity Engine V11.3"
+
+  });
+
+
+ }catch(e){
+
+  res.status(500).json({
+    error:e.message
+  });
+
+ }
+
+});
+
+
+
+
+// SIP V11.3 Identity Bootstrap
+app.post("/api/identity/bootstrap", async (req,res)=>{
+
+ try{
+
+  const {address}=req.body;
+
+  if(!address){
+    return res.status(400).json({
+      error:"wallet address required"
+    });
+  }
+
+
+  const wallet=address;
+  const did=`did:ethr:base:${wallet}`;
+
+
+  identityStore[wallet.toLowerCase()]={
+
+    address:wallet,
+
+    did,
+
+    credential:"SIPIdentityCredential",
+
+    signature:"bootstrap",
+
+    active:true,
+
+    createdAt:new Date().toISOString()
+
+  };
+
+
+  res.json({
+
+    status:"bootstrapped",
+
+    identity:{
+
+      wallet,
+
+      did,
+
+      active:true
+
+    },
+
+    next:"/api/identity/full/"+wallet,
+
+    engine:"Sovereign Identity Engine V11.3"
 
   });
 
