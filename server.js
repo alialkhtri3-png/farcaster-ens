@@ -347,6 +347,119 @@ app.get("/api/status", (req,res)=>res.json({
   modules:["DID","VC","Wallet Intelligence","Graph Intelligence","Reputation","Sybil Detection"]
 }));
 
+
+
+// SIP Signed VC Issuer
+app.post("/api/vc/issue", async (req,res)=>{
+
+ try{
+
+  const {address}=req.body;
+
+  if(!address){
+    return res.status(400).json({
+      error:"address required"
+    });
+  }
+
+  const did=`did:ethr:base:${address}`;
+
+  const credential={
+    "@context":[
+      "https://www.w3.org/2018/credentials/v1"
+    ],
+    "type":[
+      "VerifiableCredential",
+      "SIPIdentityCredential"
+    ],
+    issuer:"Sovereign Identity Protocol",
+    credentialSubject:{
+      id:did,
+      wallet:address,
+      protocol:"SIP"
+    },
+    issuanceDate:new Date().toISOString()
+  };
+
+
+  res.json({
+    credential,
+    issuer:"Sovereign Identity Protocol",
+    engine:"Sovereign Identity Engine V11"
+  });
+
+ }catch(e){
+   res.status(500).json({
+    error:e.message
+   });
+ }
+
+});
+
+
+
+
+// SIP VC Verification
+app.post("/api/vc/verify", async (req,res)=>{
+
+ try{
+
+  const {credential, signature}=req.body;
+
+  if(!credential || !signature){
+    return res.status(400).json({
+      valid:false,
+      error:"credential and signature required"
+    });
+  }
+
+
+  const unsignedCredential={...credential};
+  delete unsignedCredential.proof;
+
+  const payload=JSON.stringify(
+    unsignedCredential,
+    Object.keys(unsignedCredential).sort()
+  );
+
+  const recovered=ethers.verifyMessage(
+    payload,
+    signature
+  );
+
+
+  const expected=credential.credentialSubject.wallet;
+
+
+  res.json({
+
+    valid:
+      recovered.toLowerCase()
+      === expected.toLowerCase(),
+
+    recovered,
+
+    wallet:expected,
+
+    did:credential.credentialSubject.id,
+
+    protocol:"SIP VC Verification"
+
+  });
+
+
+ }catch(e){
+
+   res.status(400).json({
+    valid:false,
+    error:e.message
+   });
+
+ }
+
+});
+
+
 app.listen(3000,()=>{
 
 console.log(
