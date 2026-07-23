@@ -1,0 +1,18 @@
+{
+  "name": "@alialkhtri3-png/sip-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "description": "Official Sovereign Identity Protocol SDK",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alialkhtri3-png/farcaster-ens.git"
+  },
+  "dependencies": {
+    "ethers": "^6.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
