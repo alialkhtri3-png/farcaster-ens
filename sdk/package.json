@@ -1,6 +1,6 @@
 {
   "name": "@alialkhtri3-png/sip-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "main": "src/index.js",
   "license": "MIT",
