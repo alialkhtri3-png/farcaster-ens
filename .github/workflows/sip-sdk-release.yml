@@ -29,6 +29,8 @@ jobs:
       - name: Install SDK dependencies
         run: |
           cd sdk
+      - name: Configure GitHub Packages auth
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
           npm install
 
       - name: Publish SIP SDK
