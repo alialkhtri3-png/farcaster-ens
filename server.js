@@ -460,6 +460,107 @@ app.post("/api/vc/verify", async (req,res)=>{
 });
 
 
+
+
+// SIP FULL IDENTITY BUNDLE
+app.get("/api/identity/full/:wallet", async (req,res)=>{
+
+ try{
+
+  const wallet=req.params.wallet;
+
+  const didRecord =
+    identityStore[wallet.toLowerCase()] || null;
+
+
+  if(!didRecord){
+    return res.status(404).json({
+      error:"Identity not found"
+    });
+  }
+
+
+  const didDocument={
+    "@context":"https://w3id.org/did/v1",
+    id:didRecord.did,
+    controller:wallet,
+    verificationMethod:[
+      {
+        id:`${didRecord.did}#key-1`,
+        type:"EcdsaSecp256k1RecoveryMethod",
+        controller:wallet
+      }
+    ],
+    authentication:[
+      `${didRecord.did}#key-1`
+    ],
+    protocol:"SIP"
+  };
+
+
+  const vc={
+    "@context":[
+      "https://www.w3.org/2018/credentials/v1"
+    ],
+    type:[
+      "VerifiableCredential",
+      "SIPIdentityCredential"
+    ],
+    credentialSubject:{
+      id:didRecord.did,
+      wallet:wallet,
+      protocol:"SIP"
+    },
+    issuer:"Sovereign Identity Protocol"
+  };
+
+
+  res.json({
+
+    protocol:"SIP Identity Bundle",
+
+    identity:{
+      wallet,
+      did:didRecord.did,
+      active:didRecord.active
+    },
+
+    didDocument,
+
+    verifiableCredential:vc,
+
+    intelligence:{
+      walletIntelligence:{
+        balanceETH:"0.0",
+        transactions:0
+      },
+
+      reputation:{
+        score:0,
+        label:"NEW"
+      },
+
+      sybilDetection:{
+        risk:"UNKNOWN"
+      }
+    },
+
+    engine:"Sovereign Identity Engine V11.2"
+
+  });
+
+
+ }catch(e){
+
+  res.status(500).json({
+    error:e.message
+  });
+
+ }
+
+});
+
+
 app.listen(3000,()=>{
 
 console.log(
