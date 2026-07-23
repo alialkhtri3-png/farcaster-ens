@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "sip-sdk-v*"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -25,11 +26,13 @@ jobs:
           scope: "@alialkhtri3-png"
 
       - name: Install SDK dependencies
-        working-directory: sdk
-        run: npm ci
+        run: |
+          cd sdk
+          npm install
 
-      - name: Publish SDK
-        working-directory: sdk
-        run: npm publish
+      - name: Publish SIP SDK
+        run: |
+          cd sdk
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
