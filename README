@@ -13,3 +13,4 @@ Built with:
 ## Foundry Dependencies
 
 This project uses forge-std as a git submodule
+![CI](https://github.com/alialkhtri3-png/farcaster-ens/actions/workflows/ci.yml/badge.svg)

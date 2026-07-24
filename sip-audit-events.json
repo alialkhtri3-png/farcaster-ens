@@ -12,5 +12,33 @@
     "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
     "verified": true,
     "timestamp": "2026-07-24T01:00:21.261Z"
+  },
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:05:46.305Z"
+  },
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:05:46.307Z"
+  },
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:12:04.608Z"
+  },
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:12:04.609Z"
   }
 ]
