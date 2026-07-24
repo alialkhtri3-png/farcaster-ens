@@ -1,0 +1,14 @@
+{
+ "openapi":"3.0.0",
+ "info":{
+   "title":"SIP Trust API",
+   "version":"V60"
+ },
+ "paths":{
+   "/api/v1/trust-decision/{address}":{
+     "get":{
+       "summary":"Wallet trust decision"
+     }
+   }
+ }
+}

@@ -102,3 +102,11 @@ GET /api/behavior/:address
 - Web3 Applications
 - Enterprise Security
 
+
+## V60 Gateway Layer
+
+- API Gateway
+- API Key Authentication
+- Usage Tracking
+- OpenAPI Documentation
+- SaaS Integration Ready
