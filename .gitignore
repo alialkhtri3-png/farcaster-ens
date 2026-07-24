@@ -23,3 +23,15 @@ supplyChainManager.mjs
 sweep.js
 solana-sweep
 JavaScript
+
+.env
+.env.*
+node_modules/
+*.log
+*.zip
+archive/
+sip_sessions.json
+sip-threat-events.json
+sip-sign-test.js
+setup-sip-v48.sh
+sip-v49-productize.sh
