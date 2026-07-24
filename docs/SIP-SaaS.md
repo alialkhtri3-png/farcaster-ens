@@ -195,3 +195,10 @@ GET /api/behavior/:address
 - Automated Reports
 - Decision Reasoning
 - Security Insights
+
+## V73 Threat Intelligence Fusion
+
+- Threat Database
+- Risk History
+- Security Alerts
+- Fraud Pattern Tracking

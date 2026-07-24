@@ -1,0 +1,9 @@
+{
+ "threats":[],
+ "categories":[
+  "fraud",
+  "sybil",
+  "exploit",
+  "suspicious-behavior"
+ ]
+}
