@@ -117,3 +117,11 @@ GET /api/behavior/:address
 - Plans
 - Request Limits
 - Production Endpoint
+
+## V62 Monetization Layer
+
+- Subscription Engine
+- Billing Foundation
+- Invoice Tracking
+- Dashboard API
+- SaaS Revenue Ready
