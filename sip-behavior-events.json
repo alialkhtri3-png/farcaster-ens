@@ -1,9 +1,5 @@
-[
-  {
-    "event": "AUTH_SUCCESS",
-    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
-    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
-    "verified": true,
-    "timestamp": "2026-07-24T01:12:04.611Z"
-  }
-]
+{
+  "events": [],
+  "version": "V1",
+  "status": "active"
+}
