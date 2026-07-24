@@ -2885,6 +2885,8 @@ app.get("/api/trust-decision/:address", async (req,res)=>{
     trustScore:20
   };
 
+  const { calculateTrustDecision } = await import("./trustDecision.js");
+
   const result=calculateTrustDecision(
     identity,
     behavior,
