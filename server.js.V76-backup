@@ -872,14 +872,14 @@ if(!identity || !identity.did || identity.did===""){
    credentialV20: await issueCredentialV20(address),
    didRegistryV27: await didRegistryV27(address),
    verificationV21: await credentialVerificationV21(address),
-   engine:"Sovereign Identity Engine V77.0"
+   engine:"Sovereign Identity Engine V34.0"
   });
  } catch(e){console.error(e.stack);res.status(500).json({error:e.message});}
 });
 
 app.get("/api/status", (req,res)=>res.json({
-  protocol:"Sovereign Identity Protocol SIP v77.0",
-  engine:"Sovereign Identity Engine V77.0",
+  protocol:"Sovereign Identity Protocol SIP v30.1.0",
+  engine:"Sovereign Identity Engine V34.0",
   status:"online",
   runtime:"active",
   modules:["DID","VC","Wallet Intelligence","Token Intelligence","Graph Intelligence","Reputation","Sybil Detection","Risk Engine"]
@@ -923,7 +923,7 @@ app.post("/api/vc/issue", async (req,res)=>{
   res.json({
     credential,
     issuer:"Sovereign Identity Protocol",
-    engine:"Sovereign Identity Engine V77.0"
+    engine:"Sovereign Identity Engine V34.0"
   });
 
  }catch(e){
@@ -1083,7 +1083,7 @@ app.get("/api/identity/full/:wallet", async (req,res)=>{
       }
     },
 
-    engine:"Sovereign Identity Engine V77.0"
+    engine:"Sovereign Identity Engine V34.0"
 
   });
 
@@ -1152,7 +1152,7 @@ app.post("/api/identity/bootstrap", async (req,res)=>{
 
     next:"/api/identity/full/"+wallet,
 
-    engine:"Sovereign Identity Engine V77.0"
+    engine:"Sovereign Identity Engine V34.0"
 
   });
 
@@ -1222,7 +1222,7 @@ app.get("/api/did/:address", async(req,res)=>{
    did:didDocument.id,
    document:didDocument,
    resolved:true,
-   engine:"Sovereign Identity Engine V77.0"
+   engine:"Sovereign Identity Engine V34.0"
   });
 
  }catch(e){
@@ -2284,7 +2284,7 @@ app.post("/api/did/register", (req,res)=>{
 
     protocol:"SIP DID Registry",
 
-    engine:"Sovereign Identity Engine V77.0"
+    engine:"Sovereign Identity Engine V34.0"
 
   });
 
@@ -2324,7 +2324,7 @@ app.get("/api/did/:address", (req,res)=>{
  res.json({
    protocol:"SIP DID Registry",
    identity,
-   engine:"Sovereign Identity Engine V77.0"
+   engine:"Sovereign Identity Engine V34.0"
  });
 });
 
@@ -2391,7 +2391,7 @@ app.get("/api/vc/:address",(req,res)=>{
    credential,
    signature:data.signature,
    issuer:"Sovereign Identity Protocol",
-   engine:"Sovereign Identity Engine V77.0"
+   engine:"Sovereign Identity Engine V34.0"
  });
 
 });

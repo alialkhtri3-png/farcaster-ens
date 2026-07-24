@@ -1,0 +1,19 @@
+{
+ "protocol":"SIP",
+ "version":"V77",
+ "status":"production",
+ "modules":[
+  "DID",
+  "VC",
+  "Wallet Intelligence",
+  "Token Intelligence",
+  "Graph Intelligence",
+  "Reputation",
+  "Sybil Detection",
+  "Risk Engine",
+  "AI Threat Intelligence",
+  "API Gateway",
+  "Billing",
+  "Customer Portal"
+ ]
+}

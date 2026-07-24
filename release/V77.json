@@ -1,0 +1,13 @@
+{
+ "release":"SIP V77",
+ "type":"Production Candidate",
+ "status":"ready",
+ "features":[
+ "Public Demo",
+ "Enterprise API",
+ "AI Security",
+ "Risk Decision",
+ "SaaS Billing",
+ "Developer Portal"
+ ]
+}
