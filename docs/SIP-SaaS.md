@@ -202,3 +202,16 @@ GET /api/behavior/:address
 - Risk History
 - Security Alerts
 - Fraud Pattern Tracking
+
+## SIP V74 Security Hardening
+
+Features:
+
+- Dependency Audit
+- API Protection
+- Rate Limiting
+- API Key Security
+- Threat Intelligence
+- Trust Decision Engine
+- Production Security Report
+
