@@ -1,0 +1,10 @@
+{
+ "portal":"SIP Customer Portal",
+ "version":"V71",
+ "features":[
+  "API Keys",
+  "Usage",
+  "Trust Decisions",
+  "Security Events"
+ ]
+}

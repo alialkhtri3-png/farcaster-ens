@@ -181,3 +181,10 @@ GET /api/behavior/:address
 - Logging
 - Monitoring
 - Production Readiness
+
+## V71 Customer Portal Layer
+
+- Customer Dashboard
+- API Management
+- Usage View
+- Decision History
