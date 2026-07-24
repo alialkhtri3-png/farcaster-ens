@@ -1,8 +1,6 @@
-# SIP - Sovereign Identity Protocol
+# Sovereign Identity Protocol (SIP)
 
-Web3 Identity Intelligence Layer.
-
-Features:
+## Features
 
 - DID Identity
 - Wallet Authentication
@@ -12,9 +10,13 @@ Features:
 - Behavior Analysis
 - Trust Scoring
 
-Use cases:
+## Use Cases
 
 - DeFi Security
 - DAO Access Control
 - Web3 Applications
 - Fraud Prevention
+
+## Status
+
+SIP V49 Product Ready Prototype
