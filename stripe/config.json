@@ -1,0 +1,14 @@
+{
+ "provider":"stripe",
+ "mode":"subscription",
+ "products":[
+  {
+   "name":"Developer",
+   "price":"49"
+  },
+  {
+   "name":"Enterprise",
+   "price":"custom"
+  }
+ ]
+}
