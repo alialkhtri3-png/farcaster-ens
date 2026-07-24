@@ -1,0 +1,13 @@
+{
+ "free":{
+  "requests":100
+ },
+ "developer":{
+  "requests":10000,
+  "price":"49/month"
+ },
+ "enterprise":{
+  "requests":"custom",
+  "price":"contact"
+ }
+}

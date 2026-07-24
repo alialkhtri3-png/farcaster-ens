@@ -1,10 +1,9 @@
-# Identity Dashboard V12.1
+# SIP Dashboard
 
-React dashboard for:
+Features:
 
-- DID
-- Credentials
-- Identity Score
-- Reputation
-- Risk Analysis
-- Graph Intelligence
+- API usage
+- Identity queries
+- Reputation score
+- Threat reports
+- Billing status
