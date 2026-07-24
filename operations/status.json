@@ -1,0 +1,12 @@
+{
+ "service":"SIP",
+ "version":"V70",
+ "status":"operational",
+ "components":[
+  "API",
+  "Identity Engine",
+  "Trust Decision",
+  "Billing",
+  "Dashboard"
+ ]
+}

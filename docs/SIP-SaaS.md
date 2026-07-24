@@ -174,3 +174,10 @@ GET /api/behavior/:address
 - Webhooks
 - Developer Portal
 - Postman Collection
+
+## V70 Operations Layer
+
+- Metrics
+- Logging
+- Monitoring
+- Production Readiness
