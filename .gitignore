@@ -35,3 +35,11 @@ sip-threat-events.json
 sip-sign-test.js
 setup-sip-v48.sh
 sip-v49-productize.sh
+
+.env
+.env.*
+*.key
+*.pem
+secrets/
+logs/
+*.log
