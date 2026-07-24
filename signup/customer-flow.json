@@ -1,0 +1,9 @@
+{
+ "steps":[
+  "Create account",
+  "Generate API key",
+  "Connect wallet",
+  "Run first trust analysis",
+  "Upgrade plan"
+ ]
+}

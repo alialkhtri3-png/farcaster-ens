@@ -1,0 +1,24 @@
+{
+ "plans":[
+  {
+   "name":"Developer",
+   "price":0,
+   "requests":1000
+  },
+  {
+   "name":"Pro",
+   "price":49,
+   "currency":"USD",
+   "requests":100000
+  },
+  {
+   "name":"Enterprise",
+   "price":"custom",
+   "features":[
+    "SLA",
+    "Dedicated support",
+    "Custom security rules"
+   ]
+  }
+ ]
+}
