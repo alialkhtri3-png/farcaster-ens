@@ -1508,7 +1508,7 @@ app.get("/api/version",(req,res)=>{
  res.json({
   protocol:"SIP",
   release:"V42",
-  engine:"V34.0",
+  engine:"V77.0",
   runtime:"active",
 
   components:{
@@ -2227,7 +2227,7 @@ app.get("/api/behavior/:address",(req,res)=>{
 app.listen(3000,()=>{
 
 console.log(
-"🚀 Sovereign Identity Engine V33 running :3000"
+"🚀 Sovereign Identity Engine V77 running :3000"
 );
 
 });
