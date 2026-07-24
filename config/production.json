@@ -1,0 +1,7 @@
+{
+ "environment":"production",
+ "apiVersion":"v1",
+ "security":true,
+ "logging":true,
+ "status":"ready"
+}
