@@ -153,3 +153,10 @@ GET /api/behavior/:address
 - Demo Environment
 - Monitoring Status
 - Customer Demo Package
+
+## V67 Enterprise Demo Layer
+
+- Security Documentation
+- Architecture
+- Customer Flow
+- API Demo Package

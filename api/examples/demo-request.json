@@ -1,0 +1,8 @@
+{
+ "endpoint":"/api/v1/trust-decision/:address",
+ "response":{
+  "decision":"REVIEW",
+  "risk":"MEDIUM",
+  "trustScore":58
+ }
+}
