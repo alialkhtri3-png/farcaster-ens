@@ -106,3 +106,8 @@ Modules:
 - Identity Export
 Test CI update
 Current Release: v292.0.0
+
+# SIP Public Beta
+
+Sovereign Identity Protocol provides wallet trust intelligence,
+risk scoring and Web3 security decisions.

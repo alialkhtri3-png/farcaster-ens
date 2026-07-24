@@ -1,0 +1,12 @@
+{
+ "name":"SIP",
+ "version":"V64",
+ "status":"public-beta",
+ "features":[
+  "Identity",
+  "Trust Score",
+  "Risk Engine",
+  "SaaS API",
+  "Dashboard"
+ ]
+}
