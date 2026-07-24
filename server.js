@@ -1507,7 +1507,7 @@ app.get("/api/version",(req,res)=>{
 
  res.json({
   protocol:"SIP",
-  release:"V41",
+  release:"V42",
   engine:"V34.0",
   runtime:"active",
 
