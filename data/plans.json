@@ -1,0 +1,11 @@
+{
+ "free":{
+  "requests":1000
+ },
+ "developer":{
+  "requests":10000
+ },
+ "enterprise":{
+  "requests":"custom"
+ }
+}
