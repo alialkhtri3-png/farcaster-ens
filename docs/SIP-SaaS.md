@@ -71,3 +71,34 @@ Unified security decision API:
 - Risk Decision
 - Allow / Review / Block
 - Enterprise Security Output
+
+# SIP V59 Market Layer
+
+## Public API
+
+GET /api/status
+
+GET /api/trust-decision/:address
+
+GET /api/identity-score/:address
+
+GET /api/reputation/:address
+
+GET /api/behavior/:address
+
+
+## Decision Engine
+
+- ALLOW
+- REVIEW
+- BLOCK
+
+
+## Target Customers
+
+- DeFi Protocols
+- DAOs
+- Wallet Providers
+- Web3 Applications
+- Enterprise Security
+
