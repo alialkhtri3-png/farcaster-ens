@@ -1,0 +1,8 @@
+{
+ "events":[
+  "identity.created",
+  "trust.updated",
+  "risk.detected",
+  "decision.completed"
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "api":"SIP API",
+ "version":"v1",
+ "status":"stable",
+ "endpoints":[
+  "/trust-decision",
+  "/identity-score",
+  "/behavior",
+  "/reputation"
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "name":"SIP API Collection",
+ "requests":[
+  "GET /api/v1/status",
+  "GET /api/v1/trust-decision/:address",
+  "GET /api/v1/reputation/:address"
+ ]
+}
