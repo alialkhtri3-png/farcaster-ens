@@ -62,3 +62,12 @@ GET /api/reputation/:address
 - API authentication
 - Usage dashboard
 - SaaS onboarding
+
+## V57 Decision Layer
+
+Unified security decision API:
+
+- Trust Score
+- Risk Decision
+- Allow / Review / Block
+- Enterprise Security Output
