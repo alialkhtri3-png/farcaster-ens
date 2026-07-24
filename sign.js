@@ -1,7 +1,6 @@
 const { Wallet } = require("ethers");
 
 // استبدل هذا بالمفتاح الخاص بمحفظتك (Private Key) - لا تشاركه مع أحد مطلق
-const PRIVATE_KEY = "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef";
 
 
 const wallet = new Wallet(PRIVATE_KEY);
