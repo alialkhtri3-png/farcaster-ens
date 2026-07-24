@@ -1,0 +1,11 @@
+{
+ "name":"SIP Demo",
+ "version":"V66",
+ "endpoint":"/api/v1/trust/:address",
+ "features":[
+  "Identity Score",
+  "Behavior Analysis",
+  "Reputation",
+  "Risk Decision"
+ ]
+}

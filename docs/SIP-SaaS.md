@@ -146,3 +146,10 @@ GET /api/behavior/:address
 - Security Layer
 - Logging
 - Deployment Checklist
+
+## V66 Cloud Demo Layer
+
+- Deployment Templates
+- Demo Environment
+- Monitoring Status
+- Customer Demo Package
