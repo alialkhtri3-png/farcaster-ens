@@ -1,0 +1,7 @@
+{
+ "wallet":"demo",
+ "identityScore":77,
+ "trustScore":58,
+ "decision":"REVIEW",
+ "risk":"MEDIUM"
+}

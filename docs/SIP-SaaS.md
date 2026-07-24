@@ -225,3 +225,11 @@ Features:
 - Developer Documentation
 - Enterprise Sales Flow
 
+
+## SIP V76 Public Demo Layer
+
+- Public Landing
+- Demo Dashboard
+- Demo API
+- Deployment Configuration
+

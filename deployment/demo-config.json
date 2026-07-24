@@ -1,0 +1,6 @@
+{
+ "name":"SIP Public Demo",
+ "environment":"demo",
+ "status":"ready",
+ "api":"/api/status"
+}
