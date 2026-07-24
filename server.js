@@ -2130,6 +2130,100 @@ app.get("/api/identity-score/:address",(req,res)=>{
 });
 
 
+
+
+
+// ===== SIP V47.1 BEHAVIOR PERSISTENCE LAYER =====
+
+const BEHAVIOR_FILE="sip-behavior-events.json";
+
+function loadBehaviorEvents(){
+ try{
+  if(fs.existsSync(BEHAVIOR_FILE)){
+   return JSON.parse(
+    fs.readFileSync(BEHAVIOR_FILE)
+   );
+  }
+ }catch(e){}
+ return [];
+}
+
+
+
+function recordBehavior(event){
+
+ behaviorEvents.push({
+  ...event,
+  timestamp:new Date().toISOString()
+ });
+
+ saveBehaviorEvents(behaviorEvents);
+
+}
+
+function saveBehaviorEvents(events){
+ try{
+  fs.writeFileSync(
+   BEHAVIOR_FILE,
+   JSON.stringify(events,null,2)
+  );
+ }catch(e){}
+}
+
+let behaviorEvents =
+ loadBehaviorEvents();
+
+function calculateBehavior(address){
+
+ const addr=address.toLowerCase();
+
+ const events=behaviorEvents.filter(
+  e=>e.address &&
+  e.address.toLowerCase()===addr
+ );
+
+ let score=0;
+
+ if(events.length>0)
+  score+=40;
+
+ const success=
+ events.filter(
+  e=>e.event==="AUTH_SUCCESS"
+ ).length;
+
+ if(success>0)
+  score+=30;
+
+ if(events.length>=3)
+  score+=20;
+
+ return {
+  address:addr,
+  behaviorScore:Math.min(score,100),
+  sessions:events.length,
+  successfulAuth:success,
+  confidence:
+   score>=70 ? "HIGH" :
+   score>=30 ? "MEDIUM" :
+   "LOW"
+ };
+}
+
+app.get("/api/behavior/:address",(req,res)=>{
+
+ res.json({
+  protocol:"SIP",
+  version:"V47",
+  layer:"Behavior Intelligence",
+  status:"active",
+  behavior:
+   calculateBehavior(req.params.address)
+ });
+
+});
+
+
 app.listen(3000,()=>{
 
 console.log(
@@ -2704,6 +2798,13 @@ app.post("/api/auth/verify",async(req,res)=>{
       riskScore: verified ? 0 : 80,
       threatLevel: verified ? "LOW" : "HIGH",
       timestamp:new Date().toISOString()
+     });
+
+     recordBehavior({
+      event: verified ? "AUTH_SUCCESS" : "AUTH_FAILED",
+      address,
+      signer,
+      verified
      });
 
    let session=null;
