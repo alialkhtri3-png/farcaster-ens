@@ -1,0 +1,16 @@
+[
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:00:21.258Z"
+  },
+  {
+    "event": "AUTH_VERIFY",
+    "address": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "signer": "0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb",
+    "verified": true,
+    "timestamp": "2026-07-24T01:00:21.261Z"
+  }
+]

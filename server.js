@@ -1718,13 +1718,45 @@ app.get("/api/security/status",(req,res)=>{
 
 // ===== SIP V42 AUDIT LAYER =====
 
+
 const sipAudit=[];
 
+const AUDIT_FILE="sip-audit-events.json";
+
+function persistAudit(event){
+
+ let logs=[];
+
+ try{
+
+  logs=JSON.parse(
+   fs.readFileSync(AUDIT_FILE)
+  );
+
+ }catch(e){}
+
+ logs.push(event);
+
+ fs.writeFileSync(
+  AUDIT_FILE,
+  JSON.stringify(logs,null,2)
+ );
+
+}
+
+
 function addAudit(event){
- sipAudit.push({
+
+ const record={
   ...event,
   timestamp:new Date().toISOString()
- });
+ };
+
+ sipAudit.push(record);
+
+ if(typeof persistAudit==="function"){
+  persistAudit(record);
+ }
 
  if(sipAudit.length>1000){
   sipAudit.shift();
@@ -1962,6 +1994,137 @@ app.get("/api/graph/:address",(req,res)=>{
   layer:"Identity Graph Intelligence",
   status:"active",
   graph:result
+ });
+
+});
+
+
+
+
+// ===== SIP V46 UNIFIED IDENTITY SCORE ENGINE =====
+
+function calculateIdentityScore(address){
+
+ const addr=address.toLowerCase();
+
+ let reputationScore=70;
+ let graphScore=50;
+ let auditScore=0;
+ let threatScore=0;
+
+ const auditFile="sip-audit-events.json";
+
+   try{
+
+    const stored =
+     fs.existsSync(auditFile)
+      ? JSON.parse(fs.readFileSync(auditFile,"utf8"))
+      : [];
+
+    const matches =
+     stored.filter(
+      e=>e.address &&
+      e.address.toLowerCase()===addr
+     );
+
+    auditScore =
+     matches.length>0 ? 100 : 0;
+
+ }catch(e){}
+
+ try{
+
+  if(typeof sipAudit!=="undefined"){
+   const audits=sipAudit.filter(
+    e=>e.address.toLowerCase()===addr
+   );
+
+   auditScore =
+    audits.length>0 ? 100 : 0;
+  }
+
+  const threats=
+   loadThreatEvents().filter(
+    e=>e.address.toLowerCase()===addr
+   );
+
+  threatScore =
+   threats.length>0 ?
+   threats.reduce(
+    (a,b)=>a+b.riskScore,0
+   ) : 0;
+
+
+  const graph=
+   calculateGraphScore(address);
+
+  graphScore=
+   graph.graphScore;
+
+
+ }catch(e){}
+
+
+ let score =
+ Math.round(
+   (reputationScore*0.35)+
+   (graphScore*0.25)+
+   (auditScore*0.25)+
+   ((100-threatScore)*0.15)
+ );
+
+
+ if(score>100) score=100;
+ if(score<0) score=0;
+
+
+ return {
+
+  identityScore:score,
+
+  label:
+   score>=85 ? "TRUSTED":
+   score>=60 ? "ACTIVE":
+   "UNKNOWN",
+
+  risk:
+   score>=85 ? "LOW":
+   score>=60 ? "MEDIUM":
+   "HIGH",
+
+  signals:{
+   reputation:reputationScore,
+   graph:graphScore,
+   audit:auditScore,
+   threatRisk:threatScore
+  }
+
+ };
+
+}
+
+
+app.get("/api/identity-score/:address",(req,res)=>{
+
+ const result=
+ calculateIdentityScore(req.params.address);
+
+
+ res.json({
+
+  protocol:"SIP",
+
+  version:"V46",
+
+  layer:"Unified Identity Score Engine",
+
+  status:"active",
+
+  address:
+   req.params.address.toLowerCase(),
+
+  identity:result
+
  });
 
 });
@@ -2521,7 +2684,16 @@ app.post("/api/auth/verify",async(req,res)=>{
 
 
     timestamp:new Date().toISOString()
-   });
+
+     });
+
+     persistAudit({
+      event:"AUTH_VERIFY",
+      address,
+      signer,
+      verified,
+      timestamp:new Date().toISOString()
+     });
 
 
      saveThreatEvent({
