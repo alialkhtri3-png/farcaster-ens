@@ -188,3 +188,10 @@ GET /api/behavior/:address
 - API Management
 - Usage View
 - Decision History
+
+## V72 AI Security Intelligence
+
+- AI Risk Explanation
+- Automated Reports
+- Decision Reasoning
+- Security Insights

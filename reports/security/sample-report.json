@@ -1,0 +1,12 @@
+{
+ "protocol":"SIP",
+ "version":"V72",
+ "report":"AI Security Analysis",
+ "status":"generated",
+ "sections":[
+  "Identity",
+  "Behavior",
+  "Reputation",
+  "Risk"
+ ]
+}
