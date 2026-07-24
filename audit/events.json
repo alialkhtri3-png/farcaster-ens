@@ -1,0 +1,9 @@
+{
+ "system":"SIP",
+ "audit":"enabled",
+ "events":[
+  "authentication",
+  "trust_decision",
+  "risk_analysis"
+ ]
+}
