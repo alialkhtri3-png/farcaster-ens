@@ -32,4 +32,4 @@ function calculateTrustDecision(identity, behavior, reputation){
  };
 }
 
-module.exports={calculateTrustDecision};
+export { calculateTrustDecision };

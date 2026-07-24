@@ -2866,7 +2866,7 @@ app.post("/api/auth/verify",async(req,res)=>{
 
 });
 
-const { calculateTrustDecision } = require("./trustDecision");
+import { calculateTrustDecision } from "./trustDecision.js";
 
 app.get("/api/trust-decision/:address", async (req,res)=>{
  try {
