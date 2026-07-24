@@ -1,13 +1,14 @@
 console.log(JSON.stringify({
  protocol:"SIP",
- version:"V52",
- status:"production-ready",
- modules:[
+ version:"V53",
+ status:"production",
+ layers:[
  "DID",
- "Authentication",
- "Behavior",
- "Reputation",
+ "Wallet Authentication",
+ "Behavior Intelligence",
+ "Reputation Engine",
  "Threat Intelligence",
- "Trust Score"
+ "Trust Score",
+ "SaaS API"
  ]
-},null,2))
+},null,2));
