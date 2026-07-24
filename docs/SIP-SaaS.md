@@ -55,3 +55,10 @@ GET /api/reputation/:address
 - Usage tracking
 - Dashboard foundation
 - Billing ready
+
+## V55 Customer Layer
+
+- Customer accounts
+- API authentication
+- Usage dashboard
+- SaaS onboarding
